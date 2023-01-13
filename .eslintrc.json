@@ -1,9 +1,12 @@
 {
   "extends": "next/core-web-vitals",
+  "plugins": ["unused-imports"],
   "rules": {
     "quotes": ["error", "single"],
     "indent": ["error", 2],
     "semi": ["error", "never"],
-    "no-console": 1
+    "no-console": "warn",
+    "no-unused-vars": "error",
+    "unused-imports/no-unused-imports": "error"
   }
 }
