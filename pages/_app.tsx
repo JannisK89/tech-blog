@@ -6,7 +6,7 @@ import Header from '../components/Header'
 export default function App({ Component, pageProps }: AppProps) {
   const [colorMode, setColorMode] = useState('light')
 
-  const colorModeCheck = () => {
+  const darkModeCheck= () => {
     if (colorMode === 'light') {
       setColorMode('dark')
     } else setColorMode('light')
@@ -18,8 +18,7 @@ export default function App({ Component, pageProps }: AppProps) {
           'w-full h-full bg-gray-100 dark:bg-gray-900 text-slate-900 dark:text-slate-100 '
         }
       >
-        <button onClick={colorModeCheck}>Test Mode</button>
-        <Header />
+        <Header colorMode={colorMode} darkModeCheck={darkModeCheck}/>
         <Component {...pageProps} />
       </div>
     </div>
