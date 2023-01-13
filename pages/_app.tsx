@@ -2,6 +2,7 @@ import '../styles/globals.css'
 import type { AppProps } from 'next/app'
 import { useEffect, useState } from 'react'
 import Header from '../components/Header'
+import Footer from '../components/Footer'
 
 export default function App({ Component, pageProps }: AppProps) {
   const [colorMode, setColorMode] = useState('')
@@ -24,6 +25,7 @@ export default function App({ Component, pageProps }: AppProps) {
       <div className={'w-full h-full bg-gray-100 dark:bg-gray-900 text-slate-900 dark:text-slate-100 '}>
         <Header colorMode={colorMode} darkModeCheck={darkModeCheck} />
         <Component {...pageProps} />
+        <Footer />
       </div>
     </div>
   )
