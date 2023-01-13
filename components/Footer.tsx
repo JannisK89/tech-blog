@@ -12,17 +12,17 @@ const Footer = () => {
                 target="_blank"
                 rel="noopener noreferrer"
               >
-                <FaLinkedin size={22} />
+                <FaLinkedin title="LinkedIn icon" size={22} />
               </a>
             </li>
             <li className="mx-1 pt-1">
               <a href="https://github.com/JannisK89" target="_blank" rel="noopener noreferrer">
-                <FaGithub size={22} />
+                <FaGithub title="Github icon" size={22} />
               </a>
             </li>
             <li className="mx-1 pt-1">
               <a href="mailto:Jannis.Karanikis@gmail.com">
-                <FaEnvelope size={22} />
+                <FaEnvelope title="Email icon" size={22} />
               </a>
             </li>
           </ul>
