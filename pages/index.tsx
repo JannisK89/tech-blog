@@ -9,7 +9,7 @@ export default function Home() {
         <meta name="viewport" content="width=device-width, initial-scale=1" />
       </Head>
       <main>
-        <div className="max-w-4xl mx-auto">
+        <div className="max-w-4xl mx-auto h-full">
           <h2 className="text-3xl my-4">Hello There!</h2>
           <p>
             Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec metus lacus, laoreet eu neque vulputate,
