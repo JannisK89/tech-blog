@@ -14,7 +14,7 @@ type Props = {
 
 const Posts = ({ posts }: Props) => {
   return (
-    <div className="flex-1">
+    <div className="flex-1  max-w-4xl m-auto">
       {posts.map((post) => {
         return <PostCard key={post.data.id} data={post.data} />
       })}
