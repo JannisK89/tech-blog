@@ -1,7 +1,7 @@
 import { FaEnvelope, FaGithub, FaLinkedin } from 'react-icons/fa'
 const Footer = () => {
   return (
-    <footer className=" dark:bg-slate-800/40 bg-slate-200/80  dark:text-slate-200 text-slate-800  bottom-0 py-2 mt-10 flex justify-center ">
+    <footer className=" dark:bg-slate-800/40 bg-slate-200/80  dark:text-slate-200 text-slate-800  bottom-0 py-6 mt-10 flex justify-center ">
       <div className="flex flex-col">
         <div className="flex">
           <div className="text-md font-medium">Thank you for reading! You can also find me here:</div>
