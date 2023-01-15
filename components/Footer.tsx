@@ -4,7 +4,7 @@ const Footer = () => {
     <footer className=" dark:bg-slate-800/40 bg-slate-200/80  dark:text-slate-200 text-slate-800  bottom-0 py-6 mt-10 flex justify-center ">
       <div className="flex flex-col">
         <div className="flex">
-          <div className="text-md font-medium">Thank you for reading! You can also find me here:</div>
+          <div className="text-lg font-medium">Thank you for reading! You can also find me here:</div>
           <ul className="flex">
             <li className="ml-1 pt-1">
               <a
@@ -12,17 +12,17 @@ const Footer = () => {
                 target="_blank"
                 rel="noopener noreferrer"
               >
-                <FaLinkedin title="LinkedIn icon" size={22} />
+                <FaLinkedin title="LinkedIn icon" size={18} />
               </a>
             </li>
-            <li className="mx-1 pt-1">
+            <li className="ml-1 pt-1">
               <a href="https://github.com/JannisK89" target="_blank" rel="noopener noreferrer">
-                <FaGithub title="Github icon" size={22} />
+                <FaGithub title="Github icon" size={18} />
               </a>
             </li>
-            <li className="mx-1 pt-1">
+            <li className="ml-1 pt-1">
               <a href="mailto:Jannis.Karanikis@gmail.com">
-                <FaEnvelope title="Email icon" size={22} />
+                <FaEnvelope title="Email icon" size={18} />
               </a>
             </li>
           </ul>
