@@ -34,7 +34,7 @@ export default function Home() {
             <div className="flex flex-col md:flex-row ">
               <div className="w-full h-full ml-2 ">
                 <Image
-                  src="/../public/me.jpeg"
+                  src="/me.jpeg"
                   alt="Image of me"
                   width={200}
                   height={250}
