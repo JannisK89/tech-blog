@@ -1,170 +1,92 @@
 import Head from 'next/head'
+import Image from 'next/image'
+import { TypeAnimation } from 'react-type-animation'
 
 export default function Home() {
   return (
     <>
       <Head>
-        <title>Create Next App</title>
-        <meta name="description" content="Tech blog by Jannis K" />
+        <title>JannisKaranikis.dev</title>
+        <meta name="description" content="Tech blog by Jannis Karanikis" />
         <meta name="viewport" content="width=device-width, initial-scale=1" />
       </Head>
-      <main>
-        <div className="max-w-4xl mx-auto h-full">
-          <h2 className="text-3xl my-4">Hello There!</h2>
-          <p>
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec metus lacus, laoreet eu neque vulputate,
-            lacinia viverra sem. Sed risus libero, faucibus in dolor et, ornare consequat enim. Integer sed sagittis
-            magna. Donec tortor odio, placerat porttitor suscipit sed, ultrices sit amet augue. Maecenas tristique nunc
-            ac elit luctus, ut imperdiet ante sagittis. Maecenas ut eros et dolor dictum aliquet at eu dolor. Maecenas
-            ornare vulputate nulla, sed gravida odio luctus vitae. Integer sagittis sagittis dui varius sollicitudin.
-            Nam tincidunt dapibus lacinia. Aliquam ac ligula ligula. Suspendisse volutpat vestibulum sapien. Suspendisse
-            luctus enim turpis, sed malesuada ligula tempor ut. Quisque metus dolor, fermentum id tincidunt eget,
-            feugiat sed erat. Pellentesque viverra rhoncus nisl, eu tincidunt leo rhoncus eu. Curabitur in imperdiet
-            nunc, non semper nunc. Praesent in sem diam. Mauris varius leo a ultricies auctor. Aliquam et mattis lorem,
-            sed vehicula tellus. Vestibulum sollicitudin felis sed luctus efficitur. Sed metus magna, fermentum id purus
-            id, rutrum lacinia odio. Integer malesuada aliquam facilisis. Aenean pretium justo ac tristique porta. Sed
-            vitae imperdiet sem. In nisl mi, porta sed mauris vel, placerat malesuada purus. Curabitur erat nisl,
-            suscipit nec ipsum ornare, consectetur sagittis libero. Nam neque ligula, bibendum non venenatis eu,
-            ullamcorper ut felis. Mauris consequat, orci et varius condimentum, massa ante tristique leo, vel pharetra
-            mi metus vel odio. Nullam sagittis urna magna, non fermentum lorem pulvinar eu. Vivamus porta sem quis metus
-            fermentum egestas. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos
-            himenaeos. Nulla elementum gravida fermentum. Integer ac semper magna. Donec commodo semper mi, ac iaculis
-            leo ornare vel. Aliquam quam elit, maximus eget dapibus in, ornare nec purus. Praesent accumsan dolor a
-            laoreet porttitor. Curabitur lobortis lobortis mattis. Nulla justo nisi, venenatis ut venenatis ut, sagittis
-            sed orci. Aliquam eu risus eget velit placerat venenatis in vel sapien. Aenean efficitur scelerisque
-            vehicula. Sed posuere volutpat diam ut volutpat. Vestibulum id velit condimentum, pellentesque diam ut,
-            molestie eros. Nullam egestas enim eget fermentum sagittis. In ut urna non libero aliquam gravida vitae quis
-            elit. Proin viverra faucibus faucibus. Ut sollicitudin efficitur mi, quis blandit nibh congue sed. Aenean
-            laoreet leo eu orci posuere, quis feugiat arcu bibendum. Curabitur urna est, rhoncus ut fringilla nec,
-            auctor vel nibh. Integer aliquam ornare velit, eu pulvinar purus. Aliquam rhoncus lorem arcu, non venenatis
-            sem vestibulum at. Duis eget erat diam. Integer sit amet urna elit. Praesent ut porta diam. Etiam ultricies
-            odio erat, eu rutrum nibh aliquet ac. Praesent mi velit, lobortis at tellus non, consequat pulvinar magna.
-            Proin nec mi cursus, posuere mi eget, mollis enim. Nunc feugiat a ipsum vitae commodo. Curabitur id accumsan
-            nisl, ac fringilla felis. Suspendisse varius, turpis et ultricies sollicitudin, ex odio eleifend neque, quis
-            commodo enim lectus at lectus. Morbi tincidunt, felis non cursus efficitur, odio ante egestas nulla, eget
-            rutrum tellus ante tincidunt dui. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec metus
-            lacus, laoreet eu neque vulputate, Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec metus
-            lacus, laoreet eu neque vulputate, Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec metus
-            lacus, laoreet eu neque vulputate, Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec metus
-            lacus, laoreet eu neque vulputate, lacinia viverra sem. Sed risus libero, faucibus in dolor et, ornare
-            consequat enim. Integer sed sagittis magna. Donec tortor odio, placerat porttitor suscipit sed, ultrices sit
-            amet augue. Maecenas tristique nunc ac elit luctus, ut imperdiet ante sagittis. Maecenas ut eros et dolor
-            dictum aliquet at eu dolor. Maecenas ornare vulputate nulla, sed gravida odio luctus vitae. Integer sagittis
-            sagittis dui varius sollicitudin. Nam tincidunt dapibus lacinia. Aliquam ac ligula ligula. Suspendisse
-            volutpat vestibulum sapien. Suspendisse luctus enim turpis, sed malesuada ligula tempor ut. Quisque metus
-            dolor, fermentum id tincidunt eget, feugiat sed erat. Pellentesque viverra rhoncus nisl, eu tincidunt leo
-            rhoncus eu. Curabitur in imperdiet nunc, non semper nunc. Praesent in sem diam. Mauris varius leo a
-            ultricies auctor. Aliquam et mattis lorem, sed vehicula tellus. Vestibulum sollicitudin felis sed luctus
-            efficitur. Sed metus magna, fermentum id purus id, rutrum lacinia odio. Integer malesuada aliquam facilisis.
-            Aenean pretium justo ac tristique porta. Sed vitae imperdiet sem. In nisl mi, porta sed mauris vel, placerat
-            malesuada purus. Curabitur erat nisl, suscipit nec ipsum ornare, consectetur sagittis libero. Nam neque
-            ligula, bibendum non venenatis eu, ullamcorper ut felis. Mauris consequat, orci et varius condimentum, massa
-            ante tristique leo, vel pharetra mi metus vel odio. Nullam sagittis urna magna, non fermentum lorem pulvinar
-            eu. Vivamus porta sem quis metus fermentum egestas. Class aptent taciti sociosqu ad litora torquent per
-            conubia nostra, per inceptos himenaeos. Nulla elementum gravida fermentum. Integer ac semper magna. Donec
-            commodo semper mi, ac iaculis leo ornare vel. Aliquam quam elit, maximus eget dapibus in, ornare nec purus.
-            Praesent accumsan dolor a laoreet porttitor. Curabitur lobortis lobortis mattis. Nulla justo nisi, venenatis
-            ut venenatis ut, sagittis sed orci. Aliquam eu risus eget velit placerat venenatis in vel sapien. Aenean
-            efficitur scelerisque vehicula. Sed posuere volutpat diam ut volutpat. Vestibulum id velit condimentum,
-            pellentesque diam ut, molestie eros. Nullam egestas enim eget fermentum sagittis. In ut urna non libero
-            aliquam gravida vitae quis elit. Proin viverra faucibus faucibus. Ut sollicitudin efficitur mi, quis blandit
-            nibh congue sed. Aenean laoreet leo eu orci posuere, quis feugiat arcu bibendum. Curabitur urna est, rhoncus
-            ut fringilla nec, auctor vel nibh. Integer aliquam ornare velit, eu pulvinar purus. Aliquam rhoncus lorem
-            arcu, non venenatis sem vestibulum at. Duis eget erat diam. Integer sit amet urna elit. Praesent ut porta
-            diam. Etiam ultricies odio erat, eu rutrum nibh aliquet ac. Praesent mi velit, lobortis at tellus non,
-            consequat pulvinar magna. Proin nec mi cursus, posuere mi eget, mollis enim. Nunc feugiat a ipsum vitae
-            commodo. Curabitur id accumsan nisl, ac fringilla felis. Suspendisse varius, turpis et ultricies
-            sollicitudin, ex odio eleifend neque, quis commodo enim lectus at lectus. Morbi tincidunt, felis non cursus
-            efficitur, odio ante egestas nulla, eget rutrum tellus ante tincidunt dui. lacinia viverra sem. Sed risus
-            libero, faucibus in dolor et, ornare consequat enim. Integer sed sagittis magna. Donec tortor odio, placerat
-            porttitor suscipit sed, ultrices sit amet augue. Maecenas tristique nunc ac elit luctus, ut imperdiet ante
-            sagittis. Maecenas ut eros et dolor dictum aliquet at eu dolor. Maecenas ornare vulputate nulla, sed gravida
-            odio luctus vitae. Integer sagittis sagittis dui varius sollicitudin. Nam tincidunt dapibus lacinia. Aliquam
-            ac ligula ligula. Suspendisse volutpat vestibulum sapien. Suspendisse luctus enim turpis, sed malesuada
-            ligula tempor ut. Quisque metus dolor, fermentum id tincidunt eget, feugiat sed erat. Pellentesque viverra
-            rhoncus nisl, eu tincidunt leo rhoncus eu. Curabitur in imperdiet nunc, non semper nunc. Praesent in sem
-            diam. Mauris varius leo a ultricies auctor. Aliquam et mattis lorem, sed vehicula tellus. Vestibulum
-            sollicitudin felis sed luctus efficitur. Sed metus magna, fermentum id purus id, rutrum lacinia odio.
-            Integer malesuada aliquam facilisis. Aenean pretium justo ac tristique porta. Sed vitae imperdiet sem. In
-            nisl mi, porta sed mauris vel, placerat malesuada purus. Curabitur erat nisl, suscipit nec ipsum ornare,
-            consectetur sagittis libero. Nam neque ligula, bibendum non venenatis eu, ullamcorper ut felis. Mauris
-            consequat, orci et varius condimentum, massa ante tristique leo, vel pharetra mi metus vel odio. Nullam
-            sagittis urna magna, non fermentum lorem pulvinar eu. Vivamus porta sem quis metus fermentum egestas. Class
-            aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Nulla elementum
-            gravida fermentum. Integer ac semper magna. Donec commodo semper mi, ac iaculis leo ornare vel. Aliquam quam
-            elit, maximus eget dapibus in, ornare nec purus. Praesent accumsan dolor a laoreet porttitor. Curabitur
-            lobortis lobortis mattis. Nulla justo nisi, venenatis ut venenatis ut, sagittis sed orci. Aliquam eu risus
-            eget velit placerat venenatis in vel sapien. Aenean efficitur scelerisque vehicula. Sed posuere volutpat
-            diam ut volutpat. Vestibulum id velit condimentum, pellentesque diam ut, molestie eros. Nullam egestas enim
-            eget fermentum sagittis. In ut urna non libero aliquam gravida vitae quis elit. Proin viverra faucibus
-            faucibus. Ut sollicitudin efficitur mi, quis blandit nibh congue sed. Aenean laoreet leo eu orci posuere,
-            quis feugiat arcu bibendum. Curabitur urna est, rhoncus ut fringilla nec, auctor vel nibh. Integer aliquam
-            ornare velit, eu pulvinar purus. Aliquam rhoncus lorem arcu, non venenatis sem vestibulum at. Duis eget erat
-            diam. Integer sit amet urna elit. Praesent ut porta diam. Etiam ultricies odio erat, eu rutrum nibh aliquet
-            ac. Praesent mi velit, lobortis at tellus non, consequat pulvinar magna. Proin nec mi cursus, posuere mi
-            eget, mollis enim. Nunc feugiat a ipsum vitae commodo. Curabitur id accumsan nisl, ac fringilla felis.
-            Suspendisse varius, turpis et ultricies sollicitudin, ex odio eleifend neque, quis commodo enim lectus at
-            lectus. Morbi tincidunt, felis non cursus efficitur, odio ante egestas nulla, eget rutrum tellus ante
-            tincidunt dui. lacinia viverra sem. Sed risus libero, faucibus in dolor et, ornare consequat enim. Integer
-            sed sagittis magna. Donec tortor odio, placerat porttitor suscipit sed, ultrices sit amet augue. Maecenas
-            tristique nunc ac elit luctus, ut imperdiet ante sagittis. Maecenas ut eros et dolor dictum aliquet at eu
-            dolor. Maecenas ornare vulputate nulla, sed gravida odio luctus vitae. Integer sagittis sagittis dui varius
-            sollicitudin. Nam tincidunt dapibus lacinia. Aliquam ac ligula ligula. Suspendisse volutpat vestibulum
-            sapien. Suspendisse luctus enim turpis, sed malesuada ligula tempor ut. Quisque metus dolor, fermentum id
-            tincidunt eget, feugiat sed erat. Pellentesque viverra rhoncus nisl, eu tincidunt leo rhoncus eu. Curabitur
-            in imperdiet nunc, non semper nunc. Praesent in sem diam. Mauris varius leo a ultricies auctor. Aliquam et
-            mattis lorem, sed vehicula tellus. Vestibulum sollicitudin felis sed luctus efficitur. Sed metus magna,
-            fermentum id purus id, rutrum lacinia odio. Integer malesuada aliquam facilisis. Aenean pretium justo ac
-            tristique porta. Sed vitae imperdiet sem. In nisl mi, porta sed mauris vel, placerat malesuada purus.
-            Curabitur erat nisl, suscipit nec ipsum ornare, consectetur sagittis libero. Nam neque ligula, bibendum non
-            venenatis eu, ullamcorper ut felis. Mauris consequat, orci et varius condimentum, massa ante tristique leo,
-            vel pharetra mi metus vel odio. Nullam sagittis urna magna, non fermentum lorem pulvinar eu. Vivamus porta
-            sem quis metus fermentum egestas. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per
-            inceptos himenaeos. Nulla elementum gravida fermentum. Integer ac semper magna. Donec commodo semper mi, ac
-            iaculis leo ornare vel. Aliquam quam elit, maximus eget dapibus in, ornare nec purus. Praesent accumsan
-            dolor a laoreet porttitor. Curabitur lobortis lobortis mattis. Nulla justo nisi, venenatis ut venenatis ut,
-            sagittis sed orci. Aliquam eu risus eget velit placerat venenatis in vel sapien. Aenean efficitur
-            scelerisque vehicula. Sed posuere volutpat diam ut volutpat. Vestibulum id velit condimentum, pellentesque
-            diam ut, molestie eros. Nullam egestas enim eget fermentum sagittis. In ut urna non libero aliquam gravida
-            vitae quis elit. Proin viverra faucibus faucibus. Ut sollicitudin efficitur mi, quis blandit nibh congue
-            sed. Aenean laoreet leo eu orci posuere, quis feugiat arcu bibendum. Curabitur urna est, rhoncus ut
-            fringilla nec, auctor vel nibh. Integer aliquam ornare velit, eu pulvinar purus. Aliquam rhoncus lorem arcu,
-            non venenatis sem vestibulum at. Duis eget erat diam. Integer sit amet urna elit. Praesent ut porta diam.
-            Etiam ultricies odio erat, eu rutrum nibh aliquet ac. Praesent mi velit, lobortis at tellus non, consequat
-            pulvinar magna. Proin nec mi cursus, posuere mi eget, mollis enim. Nunc feugiat a ipsum vitae commodo.
-            Curabitur id accumsan nisl, ac fringilla felis. Suspendisse varius, turpis et ultricies sollicitudin, ex
-            odio eleifend neque, quis commodo enim lectus at lectus. Morbi tincidunt, felis non cursus efficitur, odio
-            ante egestas nulla, eget rutrum tellus ante tincidunt dui. lacinia viverra sem. Sed risus libero, faucibus
-            in dolor et, ornare consequat enim. Integer sed sagittis magna. Donec tortor odio, placerat porttitor
-            suscipit sed, ultrices sit amet augue. Maecenas tristique nunc ac elit luctus, ut imperdiet ante sagittis.
-            Maecenas ut eros et dolor dictum aliquet at eu dolor. Maecenas ornare vulputate nulla, sed gravida odio
-            luctus vitae. Integer sagittis sagittis dui varius sollicitudin. Nam tincidunt dapibus lacinia. Aliquam ac
-            ligula ligula. Suspendisse volutpat vestibulum sapien. Suspendisse luctus enim turpis, sed malesuada ligula
-            tempor ut. Quisque metus dolor, fermentum id tincidunt eget, feugiat sed erat. Pellentesque viverra rhoncus
-            nisl, eu tincidunt leo rhoncus eu. Curabitur in imperdiet nunc, non semper nunc. Praesent in sem diam.
-            Mauris varius leo a ultricies auctor. Aliquam et mattis lorem, sed vehicula tellus. Vestibulum sollicitudin
-            felis sed luctus efficitur. Sed metus magna, fermentum id purus id, rutrum lacinia odio. Integer malesuada
-            aliquam facilisis. Aenean pretium justo ac tristique porta. Sed vitae imperdiet sem. In nisl mi, porta sed
-            mauris vel, placerat malesuada purus. Curabitur erat nisl, suscipit nec ipsum ornare, consectetur sagittis
-            libero. Nam neque ligula, bibendum non venenatis eu, ullamcorper ut felis. Mauris consequat, orci et varius
-            condimentum, massa ante tristique leo, vel pharetra mi metus vel odio. Nullam sagittis urna magna, non
-            fermentum lorem pulvinar eu. Vivamus porta sem quis metus fermentum egestas. Class aptent taciti sociosqu ad
-            litora torquent per conubia nostra, per inceptos himenaeos. Nulla elementum gravida fermentum. Integer ac
-            semper magna. Donec commodo semper mi, ac iaculis leo ornare vel. Aliquam quam elit, maximus eget dapibus
-            in, ornare nec purus. Praesent accumsan dolor a laoreet porttitor. Curabitur lobortis lobortis mattis. Nulla
-            justo nisi, venenatis ut venenatis ut, sagittis sed orci. Aliquam eu risus eget velit placerat venenatis in
-            vel sapien. Aenean efficitur scelerisque vehicula. Sed posuere volutpat diam ut volutpat. Vestibulum id
-            velit condimentum, pellentesque diam ut, molestie eros. Nullam egestas enim eget fermentum sagittis. In ut
-            urna non libero aliquam gravida vitae quis elit. Proin viverra faucibus faucibus. Ut sollicitudin efficitur
-            mi, quis blandit nibh congue sed. Aenean laoreet leo eu orci posuere, quis feugiat arcu bibendum. Curabitur
-            urna est, rhoncus ut fringilla nec, auctor vel nibh. Integer aliquam ornare velit, eu pulvinar purus.
-            Aliquam rhoncus lorem arcu, non venenatis sem vestibulum at. Duis eget erat diam. Integer sit amet urna
-            elit. Praesent ut porta diam. Etiam ultricies odio erat, eu rutrum nibh aliquet ac. Praesent mi velit,
-            lobortis at tellus non, consequat pulvinar magna. Proin nec mi cursus, posuere mi eget, mollis enim. Nunc
-            feugiat a ipsum vitae commodo. Curabitur id accumsan nisl, ac fringilla felis. Suspendisse varius, turpis et
-            ultricies sollicitudin, ex odio eleifend neque, quis commodo enim lectus at lectus. Morbi tincidunt, felis
-            non cursus efficitur, odio ante egestas nulla, eget rutrum tellus ante tincidunt dui.
-          </p>
+      <main className="mx-6 md:mx-0">
+        <div className="max-w-4xl md:mx-auto md:my-8 my-4 h-full">
+          <TypeAnimation
+            title="Animated welcome message saying: Hello there, my name is Jannis. Welcome to my tech blog, I hope you enjoy your stay"
+            sequence={[
+              'Hello there!',
+              500,
+              'My name is Jannis',
+              1500,
+              'Welcome to my tech blog',
+              1500,
+              'I hope you enjoy your stay!',
+              3000,
+            ]}
+            wrapper="h2"
+            cursor={true}
+            repeat={Infinity}
+            className="md:text-5xl text-xl font-mono font-bold"
+          />
+          <div className="flex font-serif flex-wrap">
+            <h3 className="text-2xl md:mt-8 mt-4 font-sans mb-2 w-full">About me</h3>
+            <div className="flex flex-col md:flex-row ">
+              <div className="w-full h-full ml-2 ">
+                <Image
+                  src="/../public/me.jpeg"
+                  alt="Image of me"
+                  width={200}
+                  height={250}
+                  className="rounded-lg mt-2 border-8 border-slate-800 dark:border-slate-200 object-contain"
+                />
+              </div>
+              <div className="flex flex-col text-lg  md:text-base">
+                <p className="md:mt-2 mt-4 mx-4">
+                  Hi! My name is Jannis <span className="italic">(Pronounced Giannis like the basketball player)</span>{' '}
+                  and this here is my little corner of the internet where I write about my thoughts, things that I learn
+                  and opinions I have on all things <span className="font-bold font-mono">Web</span>{' '}
+                  <span className="font-bold font-mono">Dev</span>, <span className="font-mono font-bold">DevOps</span>{' '}
+                  and <span className="font-bold font-mono">Test</span>{' '}
+                  <span className="font-bold font-mono"> Automation</span>.
+                </p>
+
+                <p className="mt-4 mx-4">
+                  I work a lot professionally with Test Automation but my real passion is Web Development, both Frontend
+                  and Backend as well as building CI/CD pipelines and working with Cloud. I created this tech blog
+                  mostly because I have noticed that the best way for me to really deeply learn new things is to explain
+                  them to other people. So to spare my wife from listening to me talk about how Playwright is better
+                  than Selenium or how fun NextJS is daily I thought that&apos;ll instead write it on the internet for
+                  anyone who want&apos;s to listen.
+                </p>
+              </div>
+            </div>
+            <p className="mt-4 mx-4">
+              Other than that I live in Stockholm, Sweden, I am happily married to my beautiful wife and we have a
+              daughter on the way. I enjoy watching Formula 1 and Basketball{' '}
+              <span className="italic">(mostly NBA)</span>, I like reading about and practicing stoicism and I strive to
+              always learn new things wether it is to improve my Web Dev skills or something completely new.
+            </p>
+            <h3 className="text-2xl mt-8 font-sans mb-4 w-full">My preferred tools</h3>
+            <ul className="font-bold font-sans mx-4">
+              <li className="mb-2">
+                Code Editor:{' '}
+                <span className="font-mono font-medium ml-1">
+                  {' '}
+                  Visual Studio Code + Vim extension (full Vim transition probably coming soon).
+                </span>
+              </li>
+              <li className="mb-2">
+                Front End: <span className="font-mono font-medium ml-1">Javascript/Typescript, React, NextJS </span>
+              </li>
+              <li className="mb-2">
+                Back End: <span className="font-mono font-medium ml-1">Node.js, Go, C#</span>
+              </li>
+              <li className="mb-2">
+                Testing Framework: <span className="font-mono font-medium ml-1">Playwright</span>
+              </li>
+            </ul>
+          </div>
         </div>
       </main>
     </>
