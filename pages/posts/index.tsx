@@ -1,6 +1,6 @@
 import { GetStaticProps } from 'next/types'
 import PostCard from '../../components/PostCard'
-import getAllBlogPosts from '../../utils/getBlogPosts'
+import { getAllBlogPosts } from '../../utils/getBlogPosts'
 
 type Post = {
   data: { [key: string]: string }

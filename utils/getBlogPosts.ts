@@ -2,7 +2,7 @@ import fs from 'fs'
 import matter, { GrayMatterFile } from 'gray-matter'
 import path from 'path'
 
-const getAllBlogPosts = () => {
+export const getAllBlogPosts = () => {
   const postFiles: string[] = fs.readdirSync(path.join('posts'))
   const allContent = postFiles.map((file) => {
     const slug: string = file.replace('.mdx', '')
@@ -12,4 +12,9 @@ const getAllBlogPosts = () => {
   })
   return allContent
 }
-export default getAllBlogPosts
+
+export const getBlogPost = (slug: string) => {
+  const file: Buffer = fs.readFileSync(path.join(`posts/${slug}.mdx`))
+  const { data, content }: GrayMatterFile<Buffer> = matter(file)
+  return { data, content }
+}
