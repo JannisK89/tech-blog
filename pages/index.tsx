@@ -30,7 +30,7 @@ export default function Home() {
             className="md:text-5xl text-xl font-mono font-bold"
           />
           <div className="flex font-serif flex-wrap">
-            <h3 className="text-2xl md:mt-8 mt-4 font-sans mb-2 w-full">About me</h3>
+            <h3 className="text-2xl md:mt-8 mt-4 font-sans mb-2 w-full font-semibold">About me</h3>
             <div className="flex flex-col md:flex-row ">
               <div className="w-full h-full ml-2 ">
                 <Image
@@ -67,7 +67,7 @@ export default function Home() {
               <span className="italic">(mostly NBA)</span>, I like reading about and practicing stoicism and I strive to
               always learn new things wether it is to improve my Web Dev skills or something completely new.
             </p>
-            <h3 className="text-2xl mt-8 font-sans mb-4 w-full">My preferred tools</h3>
+            <h3 className="text-2xl mt-8 font-sans mb-4 w-full font-semibold">My preferred tools</h3>
             <ul className="font-bold font-sans mx-4">
               <li className="mb-2">
                 Code Editor:{' '}
