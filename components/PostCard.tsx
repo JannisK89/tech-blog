@@ -18,7 +18,7 @@ tagColor
 const PostCard = ({ data }: Props) => {
   const tags = typeof data.tags !== 'string' ? data.tags : []
   return (
-    <div className="flex mx-8 justify-center mb-6 mt-2 p-2 bg-slate-300 dark:bg-slate-800  hover:transition hover:ease-in hover:duration-300 hover:dark:bg-slate-700 hover:bg-zinc-200 cursor-pointer rounded-md shadow-md shadow-slate-500 dark:shadow-lg dark:shadow-black">
+    <div className="flex mx-8 justify-center mb-6 mt-2 p-2 bg-slate-300 dark:bg-slate-800  hover:transition hover:ease-in hover:duration-300 hover:dark:bg-slate-700 hover:bg-zinc-200 cursor-pointer rounded-md shadow-md shadow-slate-500 dark:shadow-lg dark:shadow-black max-h-[28rem] md:max-h-[21rem]">
       <Link href={`\/posts\/${data.url}`}>
         <div className=" rounded overflow-hidden max-w-4xl  ">
           <div className="px-6 py-4">
