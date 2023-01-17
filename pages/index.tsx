@@ -61,7 +61,7 @@ export default function Home() {
                 </p>
               </div>
             </div>
-            <p className="mt-4 mx-4">
+            <p className="mt-4 mx-4 text-lg md:text-base">
               Other than that I live in Stockholm, Sweden, I am happily married to my beautiful wife and we have a
               daughter on the way. I enjoy watching Formula 1 and Basketball{' '}
               <span className="italic">(mostly NBA)</span>, I like reading about and practicing stoicism and I strive to
