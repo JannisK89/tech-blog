@@ -13,9 +13,10 @@ type Props = {
 }
 
 const Posts = ({ posts }: Props) => {
+  const orderedPosts = posts.sort((a, b) => Number(b.data.id) - Number(a.data.id))
   return (
     <div className="flex-1 flex my-4 flex-wrap m-auto max-w-2xl justify-between">
-      {posts.map((post) => {
+      {orderedPosts.map((post) => {
         return <PostCard key={post.data.id} data={post.data} />
       })}
     </div>
