@@ -12,10 +12,12 @@ const Header = ({ colorMode, darkModeCheck }: Props) => {
           <h1 className="invisible md:visible w-0 md:w-1/2 text-xl font-bold">JannisKaranikis.dev</h1>
         </Link>
         <nav className="flex justify-center md:justify-end w-full md:w-1/2 text-2xl md:text-lg font-semibold">
+          <Link href="/" className="md:invisible mr-8 motion-safe:hover:animate-pulse">
+            Home
+          </Link>
           <Link href="/posts" className="md:mx-8 mr-8 motion-safe:hover:animate-pulse">
             Posts
           </Link>
-          <a className="mr-8 motion-safe:hover:animate-pulse">Contact Me</a>
           <button
             title="Dark mode toggle button"
             onClick={darkModeCheck}
