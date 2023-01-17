@@ -1,15 +1,9 @@
-import Head from 'next/head'
 import Image from 'next/image'
 import { TypeAnimation } from 'react-type-animation'
 
 export default function Home() {
   return (
     <>
-      <Head>
-        <title>JannisKaranikis.dev</title>
-        <meta name="description" content="Tech blog by Jannis Karanikis" />
-        <meta name="viewport" content="width=device-width, initial-scale=1" />
-      </Head>
       <main className="mx-6 md:mx-0">
         <div className="max-w-4xl md:mx-auto md:my-8 my-4 h-full">
           <TypeAnimation

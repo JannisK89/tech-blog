@@ -3,6 +3,7 @@ import type { AppProps } from 'next/app'
 import { useEffect, useState } from 'react'
 import Header from '../components/Header'
 import Footer from '../components/Footer'
+import Head from 'next/head'
 
 export default function App({ Component, pageProps }: AppProps) {
   const [colorMode, setColorMode] = useState('')
@@ -21,14 +22,26 @@ export default function App({ Component, pageProps }: AppProps) {
     }
   }
   return (
-    <div className={colorMode}>
-      <div
-        className={'w-full min-h-screen bg-gray-100 dark:bg-gray-900 text-slate-900 dark:text-slate-100 flex flex-col '}
-      >
-        <Header colorMode={colorMode} darkModeCheck={darkModeCheck} />
-        <Component {...pageProps} className="flex-1" />
-        <Footer />
+    <>
+      <Head>
+        <title>JannisKaranikis.dev</title>
+        <meta
+          name="description"
+          content="Tech blog by Jannis Karanikis: NextJS, React, Playwright, Javascript, Typescript"
+        />
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
+      </Head>
+      <div className={colorMode}>
+        <div
+          className={
+            'w-full min-h-screen bg-gray-100 dark:bg-gray-900 text-slate-900 dark:text-slate-100 flex flex-col '
+          }
+        >
+          <Header colorMode={colorMode} darkModeCheck={darkModeCheck} />
+          <Component {...pageProps} className="flex-1" />
+          <Footer />
+        </div>
       </div>
-    </div>
+    </>
   )
 }
