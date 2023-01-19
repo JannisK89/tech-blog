@@ -1,0 +1,144 @@
+---
+title: 'Choosing a test framework: Cypress vs Playwright'
+date: '2023-01-18'
+description: Are you wondering what test framework to use for you next project? Well look no further because here is a comparison of the two greatest test frameworks available at the moment.
+id: 2
+location: Stockholm, Sweden
+tags: ['Javascript', 'Typescript', 'Playwright', 'Cypress']
+url: choosing-a-test-framework-cypress-vs-playwright
+---
+
+# Choosing a test framework: Cypress vs Playwright
+
+## Introduction
+
+Wether you are starting a new project or just realized that Selenium is a dumpster fire and want to upgrade to save your sanity this guide is here to help you choose which framework to go with.
+
+_- But what about Test Cafe, Robot Framework etc?_
+
+Good question little Johnny, let's be honest those tools do their job and if you enjoy them more power to you but the tools we are about to compare do everything those tools do but better.
+
+I have professional experience with both tools in big and small projects, modern and legacy web apps and I am neither sponsored of affiliated with either tool, but hey Microsoft/Cypress Team if you wanna splash some money my way my contact info is in the footer 😉.
+
+## Features and limitations
+
+Let's just dive into the most important part when it comes to choosing a test framework by seeing what each framework can and can't do.
+
+### Programming language
+
+Based on what programming language you wanna use this one will be very decisive since Cypress can only be used with Javascript/Typescript while Playwright supports Javascript/Typescript, Java, C#, Python. So if Javascript is not your thing then congratulations you need go no further, Playwright is the tool for you. If you on the other side "enjoy" Javascript/Typescript we will need to go a little deeper to see what more sets these two frameworks apart.
+
+### Features
+
+- Component Testing - Playwright ✅ | Cypress ✅
+- Integration/API testing - Playwright ✅ | Cypress ✅
+- E2E testing - Playwright ✅ | Cypress ✅
+- Mocking network requests - Playwright ✅ | Cypress ✅
+- Typescript support - Playwright ✅ | Cypress ✅
+- Great documentation - Playwright ✅ | Cypress ✅
+
+#### So far so good, now let's see where these frameworks differ
+
+- Multiple tabs/windows or pop up support - Playwright ✅ | Cypress ❌
+- iFrame support - Playwright ✅ | Cypress 🟡
+- Visual test runner - Playwright 🟡 | Cypress ✅
+- Running test in parallel - Playwright ✅ | Cypress 💰
+- Ease of use for non-coders - Playwright 🟡 | Cypress ✅
+- Webkit support - Playwright ✅ | Cypress 🟡
+- Speed according to tests by [checklyHQ](https://blog.checklyhq.com/cypress-vs-selenium-vs-playwright-vs-puppeteer-speed-comparison/) - Playwright ✅ | Cypress 🟡
+
+#### Other differences that are more based on taste:
+
+#### Syntax:
+
+- Playwright - Classic JS syntax with async await
+- Cypress - Promise like syntax with .then() and command chaining
+
+#### Way of controlling the browser:
+
+- Playwright - Chrome Dev Tools protocol
+- Cypress - Electron app which embeds a browser.
+
+#### Tool Support
+
+- Playwright - Open source project ran by Microsoft. The team who built Chrome Dev tools protocol and Puppeteer working on it.
+- Cypress - Open source project ran by Cypress.io with a paid version that has additional features.
+
+---
+
+Maybe this is all you need to make your decision but let's dive deeper into some the differences.
+
+### Multiple tabs/windows or pop up support
+
+This is a very decisive, does the app under test need to open new tabs, windows or pop ups? If yes the Cypress is out of the picture since
+this is not supported and according to the cypress team [will never have multitab support](https://docs.cypress.io/guides/references/trade-offs#Multiple-tabs).
+Playwright on the other hand handles pop ups, multiple pages or multiples tabs without any issues.
+
+Yes there are suggested work around for Cypress but they are not very good, according to me this is a deal breaker if this is needed for your app.
+
+### iFrame support
+
+Cypress claims to have iFrame support that works well but let me tell you a little story:
+
+In a project I worked for (it used a low code platform...) for some reason all the content was loaded through iFrames where on every page change a new iFrame
+was loaded with the new content. Don't ask me why... Anyways I tried to automate this at first using Cypress iFrame support and it didn't work very well.
+The tests were flaky at best.
+
+I later rewrote the tests using Playwright and it was like night and day. The tests just worked and there were no issues.
+If you need to test iFrames, use Playwright. You can try Cypress but it will definitely work better with Playwright.
+
+### Visual test runner
+
+Do you know why a lot of people love Cypress? It's this right here. The test runner, where you can see step for step what your code is doing,
+see the results, grab elements with their element picker and time travel (step back and see what happened). It's a thing of beauty.
+
+Yes in playwright you can use the debugger to see the code step by step and you can use their locator creator to find/create locators but it is very bare boned in comparison.
+
+### Running tests in parallel
+
+In Playwright this is free right out of the box and it even supports running tests in the same file in parallel. It's great.
+
+In Cypress this feature is only available if you get the paid version (500 test results free). Never used the paid version since I see no reason ever
+to pay for tools that have alternatives that are available for free.
+
+Running tests in parallel is a great time saver so if you have a lot of tests consider this. (The cypress team probably deservers your money, they do a great job but why pay for something you can get for free.)
+
+### Ease of use for non-coders
+
+Now this one is very subjective. I have been coding for many years and would not consider myself as someone who's opinion we should listen to for this.
+So instead this comes from things I have heard from colleagues with less programming knowledge and read about online on QA forums.
+
+While the cypress syntax and way of working might seem a bit strange at first it seems to do very well with people with less coding experience,
+the code is easy to read (although it can get very hard to read when the nesting goes overboard). Not having to worry about asynchronicity and just
+chaining commands together is very easy to understand. That combined with the visual parts of Cypress such as the Test runner makes it great for people
+just getting into test automation.
+
+Playwright is more simple. Sure it's easy to set up but after that it's pretty much just basic javascript syntax. It's not hard in any way, you just need
+some basic programming knowledge but it's just not as easy as Cypress is. Sure if you want to implement good design patterns such Page Object Model you will
+eventually have to get more technical in both Playwright and Cypress but for people just getting started, Cypress takes the cake.
+
+### Webkit support
+
+Playwright has webkit support. Great!
+Cypress did not for a long time but now it's finally implemented as a experimental feature. Soon to be great!
+
+Other than that both have Chrome/Edge/Firefox support. If webkit is super crucial for your project then for now you should probably choose Playwright,
+but soon this will hopefully be a tie between the two of them.
+
+### Speed according to cheecklyHQ article
+
+Speed is probably not something you should consider when you make your choice and these kinds of tests should always be taken with a grain of salt.
+Since Cypress needs to load an electron app to start running the tests the start up will always be slower that playwright that just launches
+the browser and controls it like a puppet.
+This was just included in case you wanted to see some comparisons.
+
+---
+
+Thats all for this time but there will probably be more articles about these two frameworks coming soon. I hope this was enough for you to make
+an educated decision for which testing tool you want to use for your next project and please do not go with one of those super expensive testing tools marketing teams
+sell to clueless project leads. Send them this article instead because these tools are great.
+
+If you wanna know more about how Playwright controls the browser through the Chrome Dev Tools Protocol then do not worry,
+it's on my todo list to write an article about it so keep your eyes open.
+
+Thank you for reading!
