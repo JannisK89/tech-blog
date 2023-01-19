@@ -21,7 +21,7 @@ export default function Home() {
             wrapper="h2"
             cursor={true}
             repeat={Infinity}
-            className="md:text-5xl text-xl font-mono font-bold"
+            className="md:text-5xl font-mono font-bold"
           />
           <div className="flex font-serif flex-wrap">
             <h3 className="text-2xl md:mt-8 mt-4 font-sans mb-2 w-full font-semibold">About me</h3>

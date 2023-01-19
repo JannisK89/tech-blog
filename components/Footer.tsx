@@ -4,7 +4,7 @@ const Footer = () => {
     <footer className=" dark:bg-slate-800/40 bg-slate-200/80  dark:text-slate-200 text-slate-800  bottom-0 py-6 mt-10 flex justify-center ">
       <div className="flex flex-col justify-center">
         <div className="flex flex-wrap justify-center">
-          <div className="text-md md:text-lg mb-2 md:mb-0 font-medium ">
+          <div className="text-sm md:text-md md:text-lg mb-2 mx-6 md:mx-0 md:mb-0 font-medium ">
             Thank you for reading! You can also find me here:
           </div>
           <ul className="flex">
