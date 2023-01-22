@@ -1,0 +1,96 @@
+---
+title: 'Javascript: Compiled, Transpiled or Interpreted?'
+date: '2023-01-22'
+description: "How many sleepless night haven't you spent wondering how a browser can understand the Javascript you write or what just-in-time compilation is? Countless I bet, but wonder no more because I have spent my precious free time reading about it just so I could share it with you."
+id: 3
+location: Stockholm, Sweden
+tags: ['Javascript', 'Compiler', 'Typescript', 'Interpreter']
+url: js-compiled-transpiled-interpreted
+---
+
+# Javascript: Compiled, Transpiled or Interpreted?
+
+Yes, finally you will get an answer to the question that has been robbing you of sleep all those countless nights but before we can
+understand what just-in-time compilation is, let's get some basics down mon petit cherie.
+
+## Compiled vs Transpiled vs Interpreted
+
+Now be wary that there is an ever going battle between people online of what the actual difference is between these three but this the most common
+(_and right, fight me_) opinion.
+
+### **Compiled**
+
+Your code is translated into a language of a lower abstraction.
+
+![Michael from the office saying what](https://media1.giphy.com/media/ghuvaCOI6GOoTX0RmH/giphy.gif?cid=ecf05e473f0onmzy8z2trx6mnxf7k9uefo19ys9d3ko06m9g&rid=giphy.gif&ct=g)
+
+I'll try that again, a language that is readable for us humans is not readable for computers and vice versa. So a high level language such as
+Javascript or Python is easy to read by us humans but gibberish for a computer, while something as elegant as binary code is Shakespearian for a computer
+while for us stupid humans is just a bunch of zeros and ones.
+
+A little example can be seen like this where abstraction levels go lower step for step:
+
+1. Javascript/Python - Easy to read, easy to write. A lot of complicated stuff happens behind the scenes and you don't have to worry about it.
+2. C/C++ - Things are a bit harder to read and write. You have to manage memory clean up and handle memory pointers. Not too bad but not as human friendly as the last abstraction level.
+3. Assembly - If you see someone proficient in assembly then you have witnessed divinity, bask in their radiance. Things barely make sense to normal humans here.
+4. Binary code - If you see someone proficient in binary code then you have witnessed a real life Terminator and you should propably run for you life. Everything is just zeros and ones, following a base 2 numeral system.
+
+So what a compiled language means is basically taking a language of higher abstraction (human friendly) and turning it into something of a lower abstraction
+(computer friendly). This is very much an oversimplification and compilers do a lot of other cool super complicated stuff too like optimizing the code but you
+do not have to worry about that for now.
+
+It's also worth noting that a compiled language is fully translated to a lower abstraction level before you can run it. This is worth keeping
+a note of for when we talk about interpreted languages later.
+
+### Transpiled
+
+Your code is translated into a language of the same abstraction level.
+
+Hopefully you understand somewhat what that means based on the previous information but let me give you some examples.
+
+Take Typescript and Javascript for example. When you "compile" Typescript it is translated into Javascript. Typescript and Javascript are
+on a similar abstraction level for us humans, both are easy to read and understand. So when a language is translated from one language to another language on the same level we call this transpiled.
+
+Another example is using something like Babel that takes modern Javascript and translates it to older Javascript so that older browsers also can
+understand it. Both modern and old Javascript is of the same abstraction level, so instead of saying it was compiled to a older version, we say it was
+transpiled instead.
+
+### Interpreted
+
+An interpreted language is a lot like a compiled language. The language is translated from a high abstraction language into a lower abstraction language,
+but remember what I told you to take a note of?
+The main difference is that where in a compiled language the whole code is being translated before it is ran, an interpreted language allows you to have
+an interpreter that step for step translates the language into a language your specific OS understands while it is running.
+
+The bonus is that you do not have to compile the language every time you want to run it and if an interpreter exists for the target machine then
+the language can also be translated so that it can understand it. But as you might have suspected translating a language step by step as you are
+running it is not very efficient, which means performance takes a hit.
+
+## Javascript - Just in time compiled
+
+So back to the star of the show. What is Javascript, is it compiled or interpreted? - **Yes**.
+
+![Jared from Silicon Valley asking which one](https://media0.giphy.com/media/w6AMhQzMaMb84/giphy.gif?cid=ecf05e47iuv8d6nqsw69lgtmuhons13ifylhwodisglpium7&rid=giphy.gif&ct=g)
+
+Javascript is just-in-time compiled, but what the hell does that even mean. See in the early days of Javascript when
+the internet was still young and sites couldn't do much it was an interpreted language since performance wasn't much of an issue.
+But as the web evolved and the Javascript written became more and more complex browsers implemented more modern engines which used a mix of interpretation and compilation called just-in-time compiled.
+
+How a just-in-time compiler works is that it runs through the code the same way an interpreter would but it also utilizes a profiler that constantly
+monitors the code that is being run.
+If it notices the same code being run many times the profiler will class that part of the code as "warm" and send it to be compiled and saved so that
+for future uses the compiled code can be used instead which will perform much better.
+
+Now as code keeps getting warmer and warmer eventually it will be what the profiler calls "hot" which results in the compiler trying to make
+the code even more efficient by further optimizing it and instead using the new optimized version of the code for even better performance.
+
+Now you are probably wondering, why not just compile and optimize the whole code? See every time code is compiled and optimized the code execution has
+to slow down which is why only warm and hot code is compiled. Compiling and optimizing a line of code that is run once is a waste since
+the interpreter will read the code, compile it, optimize it and save it for later all which take time but no time is being saved since it will never
+use this optimized code again.
+
+Optimizing a line of code that is run 10 000 times takes a little initial hick up but more than makes up for it later due to the performance increase
+for that part of the code.
+
+So that's it in simple terms how just-in-time compilation works in Javascript, I hope you learned something new and remember that the browser engines
+are complicated monsters and have many optimization techniques that were not included in this article. Thank you for reading!
