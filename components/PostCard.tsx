@@ -14,6 +14,7 @@ tagColor
   .set('DevOps', 'bg-blue-300')
   .set('Test Automation', 'bg-violet-300')
   .set('Playwright', 'bg-emerald-400')
+  .set('Compiler', 'bg-pink-400')
 
 const PostCard = ({ data }: Props) => {
   const tags = typeof data.tags !== 'string' ? data.tags : []
