@@ -71,7 +71,10 @@ export default function Home() {
                 </span>
               </li>
               <li className="mb-2">
-                Front End: <span className="font-mono font-medium ml-1">Javascript/Typescript, React, NextJS </span>
+                Front End:{' '}
+                <span className="font-mono font-medium ml-1">
+                  Javascript/Typescript, React/NextJS, Svelte/Sveltekit{' '}
+                </span>
               </li>
               <li className="mb-2">
                 Back End: <span className="font-mono font-medium ml-1">Node.js, Go, C#</span>
