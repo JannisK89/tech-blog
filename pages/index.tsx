@@ -67,7 +67,7 @@ export default function Home() {
                 Code Editor:{' '}
                 <span className="font-mono font-medium ml-1">
                   {' '}
-                  NVim 
+                  Neovim 
                 </span>
               </li>
               <li className="mb-2">
@@ -77,7 +77,7 @@ export default function Home() {
                 </span>
               </li>
               <li className="mb-2">
-                Back End: <span className="font-mono font-medium ml-1">Node.js, Go, C#, Rust (Currently Learning=</span>
+                Back End: <span className="font-mono font-medium ml-1">Node.js, Go, C#, Rust (Currently Learning)</span>
               </li>
               <li className="mb-2">
                 Testing Framework: <span className="font-mono font-medium ml-1">Playwright</span>
