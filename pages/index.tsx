@@ -50,16 +50,17 @@ export default function Home() {
                   and Backend as well as building CI/CD pipelines and working with Cloud. I created this tech blog
                   mostly because I have noticed that the best way for me to really deeply learn new things is to explain
                   them to other people. So to spare my wife from listening to me talk about how Playwright is better
-                  than Selenium or how fun NextJS is daily I thought that&apos;ll instead write it on the internet for
+                  than Selenium or the latest Javascript framework I thought that&apos;ll instead write it on the internet for
                   anyone who want&apos;s to listen.
                 </p>
               </div>
             </div>
             <p className="mt-4 mx-4 text-lg md:text-base">
-              Other than that I live in Stockholm, Sweden, I am happily married to my beautiful wife and we have a
-              daughter on the way. I enjoy watching Formula 1 and Basketball{' '}
+              Other than that I live in Stockholm, Sweden, I have a beautiful wife and
+              daughter, I enjoy watching Formula 1 and Basketball{' '}
               <span className="italic">(mostly NBA)</span>, I like reading about and practicing stoicism and I strive to
-              always learn new things wether it is to improve my Web Dev skills or something completely new.
+              always learn new things wether it is to improve my Web Dev skills or something completely new. Lately i've been getting into
+              compilers and how they work so expect some articles about that soon.
             </p>
             <h3 className="text-2xl mt-8 font-sans mb-4 w-full font-semibold">My preferred tools</h3>
             <ul className="font-bold font-sans mx-4">
