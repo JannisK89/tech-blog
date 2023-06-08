@@ -59,7 +59,7 @@ export default function Home() {
               Other than that I live in Stockholm, Sweden, I have a beautiful wife and
               daughter, I enjoy watching Formula 1 and Basketball{' '}
               <span className="italic">(mostly NBA)</span>, I like reading about and practicing stoicism and I strive to
-              always learn new things wether it is to improve my Web Dev skills or something completely new. Lately i've been getting into
+              always learn new things wether it is to improve my Web Dev skills or something completely new. Lately I&apos;ve been getting into
               compilers and how they work so expect some articles about that soon.
             </p>
             <h3 className="text-2xl mt-8 font-sans mb-4 w-full font-semibold">My preferred tools</h3>
