@@ -2,6 +2,7 @@ import { GetStaticProps } from 'next/types'
 import { getAllBlogPosts, getBlogPost } from '../../utils/getBlogPosts'
 import { serialize } from 'next-mdx-remote/serialize'
 import { MDXRemote, type MDXRemoteSerializeResult } from 'next-mdx-remote'
+import rehypeHighlight from 'rehype-highlight'
 
 type Props = {
   content: MDXRemoteSerializeResult<Record<string, unknown>, Record<string, string>>
@@ -21,7 +22,9 @@ const Post = ({ data, content }: Props) => {
 export const getStaticProps: GetStaticProps = async ({ params }) => {
   const slug = typeof params?.slug === 'string' ? params.slug : ''
   const { data, content } = getBlogPost(slug)
-  const mdxContent = await serialize(content)
+  const mdxContent = await serialize(content, {
+    mdxOptions: {rehypePlugins: [rehypeHighlight]}
+  })
   return {
     props: {
       content: mdxContent,
