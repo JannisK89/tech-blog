@@ -1,0 +1,119 @@
+---
+title: 'Javascript Level Up Part 1 - The Prototype Chain'
+date: '2023-10-19'
+description: "Welcome to this new series where we will take a little more intermediate dive into Javascript and how things actually work. Part 1 - The Prototype Chain!"
+id: 4
+location: Stockholm, Sweden
+tags: ['Javascript', 'Typescript', 'Intermediate']
+url: javascript-level-up-part1
+---
+
+# Javascript Level Up - Part 1 - The Prototype Chain
+
+Remember when I said that I would update this blog once every 2 weeks?  
+I hope not because as you may notice the last post was almost a year ago. __Whoops.__
+
+
+Well worry not because I will be closing this year with a bang. A series of posts about knowledge
+all Javascript devs should have but that I unfortunately see lacking all too often. Hopefully this will make
+up for my lack of posts, nobody warned me how little free time you have when you have an infant (actually, 
+pretty much everybody warned me about this but I thought they were exaggerating.. Turns out they weren't).
+
+Enough yammering, let's get started!
+
+
+## The Prototype Chain
+Lets take a look at some code.
+```js 
+const hero = {
+  name: 'Guts',
+  weapon: 'Greatsword',
+  swing: function() { console.log(`${this.name} swings a ${this.weapon}`) }
+}
+
+hero.swing()
+```
+
+Pretty straight forward, we create an object that has 2 properties: name and weapon. It also has 
+a method called swing that logs the fact that they swing their weapon to the console.  
+And when we then call the method we get our little message printed to the console (try pasting the code into
+the browsers console if you want to test without whipping out your code editor).
+
+"_Guts swings a Greatsword_"
+![Guts swinging his greatsword](https://media.giphy.com/media/K0JrA2VbkFy2A/giphy.gif)
+
+Working as expected right? Nothing strange at all about that I would say. Now what happens if we try to call 
+__hero.roar()__ on our hero object? We get an error that .roar() is not a function. Still I would say that 
+it is exactly as we expected since we never created it.
+
+Now how about we call __hero.toString()__? Hmm strange, that returns an object, even though we never
+created a toString method for our object. And that is due to...
+
+### Prototypal inheritance
+A prototype in Javascript in like a blueprint that your object will inherit from. Let's keep on 
+with our hero example and let's create an object that inherits from our Hero object.
+
+```js 
+const villain =  Object.create(hero)
+```
+
+Now if we type __villain__ in our browser console we see that it is an empty object. What happens if we
+try to call __.swing()__ on our villain object? 
+
+It logs: "_Guts swings a Greatsword_"
+
+But how does that work when our villain object was just an empty object? It's because we are inhereting from
+our prototype the hero object. Try typing __villain.\_\_proto\_\___ into the browsers console. It returns
+the hero object with name, weapon and the swing method.
+
+But our villain is not guts, let's change that.
+```js 
+villain.name = 'Griffith'
+villain.weapon = 'Saber'
+```
+
+and we run __villain.swing()__ and..
+
+"_Griffith swings a Saber_"
+
+![Griffith swinging his saber](https://media.tenor.com/G5AuRJr7LwYAAAAd/griffth-berserk-griffith.gif)
+
+
+Now if we enter our villain object into the console we get \{name: "Griffith", weapon: "Saber"\} and we know
+that we get the Swing method from the hero object we inhereted from. But let try typing __villain.\_\_proto\_\___
+again.
+
+It's still our hero object, the name is still Guts and the weapon is still Greatsword but we
+logged that Griffith was swinging his saber which brings us to..
+
+## Climbing the prototype chain
+The way Javascript works is that when you call a function or try to get a property from an object it will
+start climbing the prototype chain. In the case of __villain.name__ it will enter our villain object, find name
+and use that. Which is why swing() uses the name from villain once we added it instead of the name from
+hero that was in the prototype which it inherits from.
+
+Now when we call __.swing()__ on our villain object it will check villain, find nothing there then climb
+the prototype chain to hero where it fill find the method swing() and use that.
+
+Great, glad we solved where those two come from, but we still haven't answered one question. Where did
+__.toString()__ come from and why does that work on our hero and our villain object?
+
+See every object in Javascript has a standard object prototype which contains things like __.toString()__ 
+, __.hasOwnProperty()__ etc so everytime you create an object using squigly brackets you automatically get these 
+methods. In our case it will:
+1. Enter into villain, find nothing and climb up the prototype chain to hero.
+1. Enter into hero, find nothing and climb up the prototype chain to Object.
+1. Enter into Object, find __.toString()__ and call it.
+
+But what happens if we try to get a property that does not exist, like __.helloWorld__?
+Once again we will climb the chain, untill we get to the top. If nothing was found, it means that
+the property has not been defined and we get the source of nightmares for many Javascript devs __Undefined__.
+
+
+
+Hope you liked this post and that you learned something!
+If you have any questions or opinions you can contact me through LinkedIn or Email (both available in the footer)
+Stay tuned for Part 2 of the Javascript Level Up series! (It will not take another year I promise)
+
+
+ 
