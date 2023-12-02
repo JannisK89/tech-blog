@@ -24,7 +24,9 @@ export default function Home() {
             className="md:text-5xl font-mono font-bold"
           />
           <div className="flex font-serif flex-wrap">
-            <h3 className="text-2xl md:mt-8 mt-4 font-sans mb-2 w-full font-semibold">About me</h3>
+            <h3 className="text-2xl md:mt-8 mt-4 font-sans mb-2 w-full font-semibold">
+              About me
+            </h3>
             <div className="flex flex-col md:flex-row ">
               <div className="w-full h-full ml-2 ">
                 <Image
@@ -37,39 +39,48 @@ export default function Home() {
               </div>
               <div className="flex flex-col text-lg  md:text-base">
                 <p className="md:mt-2 mt-4 mx-4">
-                  Hi! My name is Jannis <span className="italic">(Pronounced Giannis like the basketball player)</span>{' '}
-                  and this here is my little corner of the internet where I write about my thoughts, things that I learn
-                  and opinions I have on all things <span className="font-bold font-mono">Web</span>{' '}
-                  <span className="font-bold font-mono">Dev</span>, <span className="font-mono font-bold">DevOps</span>{' '}
-                  and <span className="font-bold font-mono">Test</span>{' '}
+                  Hi! My name is Jannis{' '}
+                  <span className="italic">
+                    (Pronounced Giannis like the basketball player)
+                  </span>{' '}
+                  and this here is my little corner of the internet where I
+                  write about my thoughts, things that I learn and opinions I
+                  have on all things{' '}
+                  <span className="font-bold font-mono">Web</span>{' '}
+                  <span className="font-bold font-mono">Dev</span>,{' '}
+                  <span className="font-mono font-bold">DevOps</span> and{' '}
+                  <span className="font-bold font-mono">Test</span>{' '}
                   <span className="font-bold font-mono"> Automation</span>.
                 </p>
 
                 <p className="mt-4 mx-4">
-                  I work a lot professionally with Test Automation but my real passion is Web Development, both Frontend
-                  and Backend as well as building CI/CD pipelines and working with Cloud. I created this tech blog
-                  mostly because I have noticed that the best way for me to really deeply learn new things is to explain
-                  them to other people. So to spare my wife from listening to me talk about how Playwright is better
-                  than Selenium or the latest Javascript framework I thought that&apos;ll instead write it on the internet for
-                  anyone who want&apos;s to listen.
+                  I work a lot professionally with Test Automation but my real
+                  passion is pretty much all things code, both Frontend and
+                  Backend as well as building CI/CD pipelines and working with
+                  Cloud. I created this tech blog mostly because I have noticed
+                  that the best way for me to really deeply learn new things is
+                  to explain them to other people. So to spare my wife from
+                  listening to me talk about how Playwright is better than
+                  Selenium or the latest Javascript framework I thought
+                  that&apos;ll instead write about it on the internet for anyone
+                  who want&apos;s to listen.
                 </p>
               </div>
             </div>
             <p className="mt-4 mx-4 text-lg md:text-base">
-              Other than that I live in Stockholm, Sweden, I have a beautiful wife and
-              daughter, I enjoy watching Formula 1 and Basketball{' '}
-              <span className="italic">(mostly NBA)</span>, I like reading about and practicing stoicism and I strive to
-              always learn new things wether it is to improve my Web Dev skills or something completely new. Lately I&apos;ve been getting into
-              compilers and how they work so expect some articles about that soon.
+              Other than that I live in Stockholm, Sweden, I have a beautiful
+              wife and daughter, I enjoy watching Formula 1 and Basketball{' '}
+              <span className="italic">(mostly NBA)</span>, I like reading about
+              and practicing stoicism and I strive to always learn new things
+              wether it is to improve my skills or something completely new.
             </p>
-            <h3 className="text-2xl mt-8 font-sans mb-4 w-full font-semibold">My preferred tools</h3>
+            <h3 className="text-2xl mt-8 font-sans mb-4 w-full font-semibold">
+              My preferred tools
+            </h3>
             <ul className="font-bold font-sans mx-4">
               <li className="mb-2">
                 Code Editor:{' '}
-                <span className="font-mono font-medium ml-1">
-                  {' '}
-                  Neovim 
-                </span>
+                <span className="font-mono font-medium ml-1"> Neovim</span>
               </li>
               <li className="mb-2">
                 Front End:{' '}
@@ -78,10 +89,14 @@ export default function Home() {
                 </span>
               </li>
               <li className="mb-2">
-                Back End: <span className="font-mono font-medium ml-1">Node.js, Go, C#, Rust (Currently Learning)</span>
+                Back End:{' '}
+                <span className="font-mono font-medium ml-1">
+                  Node.js, Go, C#, Rust (Currently Learning)
+                </span>
               </li>
               <li className="mb-2">
-                Testing Framework: <span className="font-mono font-medium ml-1">Playwright</span>
+                Operating System:{' '}
+                <span className="font-mono font-medium ml-1">Ubuntu</span>
               </li>
             </ul>
           </div>
