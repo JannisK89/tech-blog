@@ -9,7 +9,7 @@ export default function App({ Component, pageProps }: AppProps) {
   const [colorMode, setColorMode] = useState('')
 
   useEffect(() => {
-    setColorMode(window.localStorage.getItem('darkMode') ?? 'light')
+    setColorMode(window.localStorage.getItem('darkMode') ?? 'dark')
   }, [])
 
   const darkModeCheck = () => {
