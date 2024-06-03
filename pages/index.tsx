@@ -33,7 +33,7 @@ export default function Home() {
                   src="/me.jpeg"
                   alt="Image of me"
                   width={200}
-                  height={250}
+                  height={266}
                   className="rounded-lg mt-2 border-8 border-slate-800 dark:border-slate-200 object-contain"
                 />
               </div>
@@ -48,22 +48,22 @@ export default function Home() {
                   have on all things{' '}
                   <span className="font-bold font-mono">Web</span>{' '}
                   <span className="font-bold font-mono">Dev</span>,{' '}
+                  <span className="font-bold font-mono">Cyber Security</span>,{' '}
                   <span className="font-mono font-bold">DevOps</span> and{' '}
                   <span className="font-bold font-mono">Test</span>{' '}
                   <span className="font-bold font-mono"> Automation</span>.
                 </p>
 
                 <p className="mt-4 mx-4">
-                  I work a lot professionally with Test Automation but my real
-                  passion is pretty much all things code, both Frontend and
-                  Backend as well as building CI/CD pipelines and working with
-                  Cloud. I created this tech blog mostly because I have noticed
-                  that the best way for me to really deeply learn new things is
-                  to explain them to other people. So to spare my wife from
-                  listening to me talk about how Playwright is better than
-                  Selenium or the latest Javascript framework I thought
-                  that&apos;ll instead write about it on the internet for anyone
-                  who want&apos;s to listen.
+                  I have a passion for pretty much all things code, both
+                  Frontend and Backend as well as building CI/CD pipelines, test
+                  automation, cyber security and working with Cloud. I created
+                  this tech blog mostly because I have noticed that the best way
+                  for me to really deeply learn new things is to explain them to
+                  other people. So to spare my wife from listening to me talk
+                  about how Playwright is better than Selenium or the latest
+                  Javascript framework I thought that&apos;ll instead write
+                  about it on the internet for anyone who want&apos;s to listen.
                 </p>
               </div>
             </div>
@@ -71,8 +71,9 @@ export default function Home() {
               Other than that I live in Stockholm, Sweden, I have a beautiful
               wife and daughter, I enjoy watching Formula 1 and Basketball{' '}
               <span className="italic">(mostly NBA)</span>, I like reading about
-              and practicing stoicism and I strive to always learn new things
-              wether it is to improve my skills or something completely new.
+              self improvement and stoicism and I strive to always learn new
+              things wether it is to improve my skills or something completely
+              new.
             </p>
             <h3 className="text-2xl mt-8 font-sans mb-4 w-full font-semibold">
               My preferred tools
@@ -85,18 +86,18 @@ export default function Home() {
               <li className="mb-2">
                 Front End:{' '}
                 <span className="font-mono font-medium ml-1">
-                  Javascript/Typescript, React/NextJS, Svelte/Sveltekit{' '}
+                  Typescript, React/NextJS, Svelte/Sveltekit{' '}
                 </span>
               </li>
               <li className="mb-2">
                 Back End:{' '}
                 <span className="font-mono font-medium ml-1">
-                  Node.js, Go, C#, Rust (Currently Learning)
+                  Go, C#, Typescript
                 </span>
               </li>
               <li className="mb-2">
                 Operating System:{' '}
-                <span className="font-mono font-medium ml-1">Ubuntu</span>
+                <span className="font-mono font-medium ml-1">Ubuntu, Kali</span>
               </li>
             </ul>
           </div>
