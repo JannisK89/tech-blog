@@ -9,6 +9,13 @@ type Project = {
 
 const projects: Project[] = [
   {
+    title: 'Landing Page',
+    url: 'https://janniskaranikis.dev',
+    sourceCodeUrl: 'https://github.com/JannisK89/landing-page',
+    description:
+      'Simple linktree type landing page for contact information, github, blog and social media links. Created using NextJS 14, Typescript and TailwindCSS.',
+  },
+  {
     title: 'Art Store',
     url: 'https://art-store.janniskaranikis.dev/',
     sourceCodeUrl: 'https://github.com/JannisK89/art-store',
@@ -34,7 +41,7 @@ const projects: Project[] = [
 export default function Portfolio() {
   return (
     <>
-      <main className="mx-6 md:mx-0 md:h-[calc(100vh-202px)]">
+      <main className="mx-6 md:mx-0">
         <div className="max-w-4xl md:mx-auto md:my-8 my-4 h-full">
           <h2 className="text-3xl md:mt-8 mt-4 font-sans w-full font-semibold mb-8">
             Portfolio
