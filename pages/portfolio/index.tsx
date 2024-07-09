@@ -9,6 +9,15 @@ type Project = {
 
 const projects: Project[] = [
   {
+    title: 'Job Planner',
+    url: 'https://jobplanner.janniskaranikis.dev',
+    sourceCodeUrl: 'https://github.com/JannisK89/jobplanner',
+    description: ` (Site is in Swedish) 
+    Full stack proof of concept for a job planner app that allows users to create plans to help with job search with the help of an AI assistant.
+    Uses OpenAI APIs because everybody gotta have an LLM project right? ;D
+    Created using NextJS 14, Typescript, Drizzle, Vercel Postgres, OpenAI, TailwindCSS and a bunch of other fun stuff.`,
+  },
+  {
     title: 'Landing Page',
     url: 'https://janniskaranikis.dev',
     sourceCodeUrl: 'https://github.com/JannisK89/landing-page',
