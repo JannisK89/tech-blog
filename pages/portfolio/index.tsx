@@ -9,6 +9,13 @@ type Project = {
 
 const projects: Project[] = [
   {
+    title: 'aBURL - A Better URL',
+    url: 'https://www.npmjs.com/package/a-better-url',
+    sourceCodeUrl: 'https://github.com/JannisK89/a-better-url',
+    description:
+      'A npm package for a simpler way to manage URLs in your project without the mess of string concatenation instead treating URLs as objects. Created using Typescript with Bun.',
+  },
+  {
     title: 'Job Planner',
     url: 'https://jobplanner.janniskaranikis.dev',
     sourceCodeUrl: 'https://github.com/JannisK89/jobplanner',
