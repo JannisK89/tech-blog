@@ -38,7 +38,9 @@ export default function App({ Component, pageProps }: AppProps) {
           }
         >
           <Header colorMode={colorMode} darkModeCheck={darkModeCheck} />
-          <Component {...pageProps} className="flex-1" />
+          <div className="min-h-[calc(100vh-12rem)]">
+            <Component {...pageProps} className="flex-1 " />
+          </div>
           <Footer />
         </div>
       </div>
