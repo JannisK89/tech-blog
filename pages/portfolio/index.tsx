@@ -9,6 +9,13 @@ type Project = {
 
 const projects: Project[] = [
   {
+    title: 'CV - Resume Page',
+    url: 'https://cv.janniskaranikis.dev',
+    sourceCodeUrl: 'https://github.com/JannisK89/cv',
+    description:
+      'Online resume page with a simple design to showcase my skills and experience. Created using Svelte 4 with Sveltekit, Typescript and TailwindCSS.',
+  },
+  {
     title: 'aBURL - A Better URL',
     url: 'https://www.npmjs.com/package/a-better-url',
     sourceCodeUrl: 'https://github.com/JannisK89/a-better-url',
