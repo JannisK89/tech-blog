@@ -33,7 +33,7 @@ const projects: Project[] = [
   },
   {
     title: 'Landing Page',
-    url: 'https://janniskaranikis.dev',
+    url: 'https://links.janniskaranikis.dev',
     sourceCodeUrl: 'https://github.com/JannisK89/landing-page',
     description:
       'Simple linktree type landing page for contact information, github, blog and social media links. Created using NextJS 14, Typescript and TailwindCSS.',
