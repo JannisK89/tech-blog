@@ -5,14 +5,20 @@ import { MDXRemote, type MDXRemoteSerializeResult } from 'next-mdx-remote'
 import rehypeHighlight from 'rehype-highlight'
 
 type Props = {
-  content: MDXRemoteSerializeResult<Record<string, unknown>, Record<string, string>>
+  content: MDXRemoteSerializeResult<
+    Record<string, unknown>,
+    Record<string, string>
+  >
   data: { [key: string]: string }
 }
 
 const Post = ({ data, content }: Props) => {
   return (
-    <div className=" md:mx-auto  my-8  mx-6 h-full">
-      <article title={data.title} className="prose prose-slate dark:prose-invert">
+    <div className="md:mx-auto my-8 mx-6 h-full flex justify-center items-center">
+      <article
+        title={data.title}
+        className="prose prose-slate dark:prose-invert "
+      >
         <MDXRemote {...content} />
       </article>
     </div>
@@ -23,7 +29,7 @@ export const getStaticProps: GetStaticProps = async ({ params }) => {
   const slug = typeof params?.slug === 'string' ? params.slug : ''
   const { data, content } = getBlogPost(slug)
   const mdxContent = await serialize(content, {
-    mdxOptions: {rehypePlugins: [rehypeHighlight]}
+    mdxOptions: { rehypePlugins: [rehypeHighlight] },
   })
   return {
     props: {
