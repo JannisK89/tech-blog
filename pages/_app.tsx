@@ -24,7 +24,7 @@ export default function App({ Component, pageProps }: AppProps) {
   return (
     <>
       <Head>
-        <title>JannisKaranikis.dev</title>
+        <title>Tech Blog & Portfolio by Jannis Karanikis</title>
         <meta
           name="description"
           content="Tech blog by Jannis Karanikis: NextJS, React, Playwright, Javascript, Typescript"
